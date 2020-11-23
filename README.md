@@ -7,7 +7,7 @@
 - Computer Science and Engineering at Chung-Ang Univerisity in Seoul, South Korea
 
 📫 How to reach me
-- 📧: jona527111@gmail.com
+- 📧: ntcho13@gmail.com
 - 📷: [@nt.cho](https://instagram.com/nt.cho)
 
 ⚡ Fun fact
