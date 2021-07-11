@@ -1,14 +1,25 @@
-### Hi! I'm Nathan. Hope you are doing well! 👋
+## 👋 Hi! I'm Nathan.
 
-🔭 I’m currently working on
-- learning how to live in a limited environment
+### 🌏 What I’m doing now
 
-🌱 I’m currently learning
-- Computer Science and Engineering at Chung-Ang Univerisity in Seoul, South Korea
+I’m now serving my military duty for my country in South Korea until **July 2022**.
 
-📫 How to reach me
-- 📧: ntcho13@gmail.com
-- 📷: [@nt.cho](https://instagram.com/nt.cho)
+### 👨‍💻 What I (used to) do
 
-⚡ Fun fact
-- 🎥: [youtube.com/nathancho](https://youtube.com/nathancho)
+I’ve built multiple mobile apps and web services so far, and I’m exploring the broader world of computer science now.
+
+I am learning from [Computer Science and Engineering major](https://cse.cau.ac.kr) at [Chung-Ang Univerisity](https://cau.ac.kr) in Seoul, South Korea.
+
+### 🚀 What inspires me
+
+I inspire to utilitize the power of computer to improve everyone’s life. I wonder and imagine how far we, as humans, will be in 10 years.
+
+### ✨ Other stuffs
+
+I love videography and photography! Capturing beautiful moments and telling interesting stories always excites me. 🎥📸
+
+I also write some stuff on [my blog on GitHub](https://ntcho.github.io) too.
+
+### 🔭 Ways to reach me
+
+You can find me on [GitHub](https://github.com/ntcho), [Instagram](https://instagram.com/nt.cho) and [YouTube](https://youtube.com/nathancho). Also I have [berict.com](https://berict.com) as my personal website, and you can see more of my work and experiences there.
