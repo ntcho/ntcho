@@ -14,7 +14,7 @@ I am learning from [Computer Science and Engineering major](https://cse.cau.ac.k
 
 I inspire to utilitize the power of computer to improve everyone’s life. I wonder and imagine how far we, as humans, will be in 10 years.
 
-### ✨ Other stuffs
+### ✨ Other things I'm interested in
 
 I love videography and photography! Capturing beautiful moments and telling interesting stories always excites me. 🎥📸
 
