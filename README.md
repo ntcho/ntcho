@@ -22,4 +22,4 @@ I also write some stuff on [my blog on GitHub](https://ntcho.github.io) too.
 
 ### 🔭 Ways to reach me
 
-You can find me on [GitHub](https://github.com/ntcho), [Instagram](https://instagram.com/nt.cho) and [YouTube](https://youtube.com/nathancho). Also I have [berict.com](https://berict.com) as my personal website, and you can see more of my work and experiences there.
+You can find me on [GitHub](https://github.com/ntcho), [Instagram](https://instagram.com/nt.cho) and [YouTube](https://youtube.com/nathancho). Also I have [ntcho.me](https://ntcho.me) as my personal website, and you can see more of my work and experiences there.
