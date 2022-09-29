@@ -2,13 +2,7 @@
 
 ### 🌏 What I’m doing now
 
-I’m now serving my military duty for my country in South Korea until **July 2022**.
-
-### 👨‍💻 What I (used to) do
-
-I’ve built multiple mobile apps and web services so far, and I’m exploring the broader world of computer science now.
-
-I am learning from [Computer Science and Engineering major](https://cse.cau.ac.kr) at [Chung-Ang Univerisity](https://cau.ac.kr) in Seoul, South Korea.
+I’m studying & innovating at Bard College in Annandale-on-Husdon, New York.
 
 ### 🚀 What inspires me
 
