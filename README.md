@@ -2,7 +2,7 @@
 
 ### 🌏 What I’m doing now
 
-I’m studying & innovating at Bard College in Annandale-on-Husdon, New York.
+I’m studying & innovating at [Bard College](https://bard.edu) in Annandale-on-Husdon, New York.
 
 ### 🚀 What inspires me
 
