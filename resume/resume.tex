@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{contour}
@@ -43,6 +44,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Custom colors
+\definecolor{titlecolor}{RGB}{39, 68, 130}
+\definecolor{customblue}{RGB}{31, 63, 162}
+\definecolor{customred}{RGB}{140, 26, 17}
+
 % Adjust margins
 \usepackage[bottom=0.4in,top=0.6in, left=0.5in, right=0.5in]{geometry}
 % \addtolength{\oddsidemargin}{-0.5in}
@@ -59,8 +65,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \color{customblue}\vspace{-4pt}\scshape\raggedright\large\textbf
+}{}{0em}{}[\color{customblue}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -77,6 +83,7 @@
 
 %-------------------------
 % Custom commands
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -86,8 +93,8 @@
 \newcommand{\resumeSubheading}[4]{
   \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \hspace{-1.5pt}\textbf{#1} & #2 \\
+      \hspace{-1.5pt}\textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -98,7 +105,7 @@
 \newcommand{\resumeEntry}[3]{
   \item
     \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
-      \textbf{#1} & \textit{\small#2} & {#3} \\
+      \hspace{-1.5pt}\textbf{#1} & \textit{\small#2} & {#3} \\
     \end{tabular*}\vspace{-5.5pt}
 }
 
@@ -108,8 +115,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.25in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5.5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.22in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5.7pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,7 +126,7 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Nathan Cho} \\ \vspace{8pt}
+    \textbf{\color{titlecolor}\Huge Nathan Cho} \\ \vspace{8pt}
     \small 
     % \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
     % $|$ 
@@ -136,12 +143,13 @@
 
 
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.11in, label={}]
+\section{Skills}
+ \begin{itemize}[leftmargin=0.08in, label={}]
+    \vspace{1pt}
     \small{\item{
      \textbf{Languages}   \hspace{5.5mm} {JavaScript, TypeScript, Python, Java, HTML/CSS, SQL, Regular Expression, R} \\
-     \vspace{1pt}
-     \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, Material-UI, NumPy, MongoDB, Docker, AWS} \\
+     \vspace{1.2pt}
+     \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, Material-UI, NumPy, MongoDB, Docker, AWS, Git} \\
      \vspace{1pt}
      \textbf{Other}       \hspace{13mm} {UI/UX design, API design, CI/CD, open source contribution, user research}
     }}\vspace{-4pt}
@@ -155,10 +163,10 @@
           {Hackathon Team Lead}{}{Sep 2021 -- Oct 2021}
           \resumeItemListStart
             \resumeItem{Proposed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- web-based knowledge base software designed for military intranet}
+            \resumeItem{Winner of the \textbf{\color{customred}Chief of Naval Operations Award (4th out of 70 teams) in the national open source hackathon}}
             \resumeItem{Led team of 5 including engineers and designers with agile methodologies, completing the project in 5 weeks}
-            \resumeItem{Arthitected the RESTful API including access management, collaborative editing and version control functionality}
+            \resumeItem{\textbf{Arthitected the RESTful API including access management, collaborative editing and version control functionality}}
             \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
-            \resumeItem{Winner of the Chief of Naval Operations Award (4th out of 70 teams) in the national open source hackathon}
           \resumeItemListEnd
       % \resumeProjectHeading
       %     {\textbf{work.elastic}}{Sep 2022 -- Current}
@@ -172,13 +180,13 @@
           \resumeItemListStart
             \resumeItem{Co-founded and launched \textbf{Fuhome} --- smart home (home automation) gadget e-commerce \& user community}
             \resumeItem{Identified target users by conducting surveys with 100+ participants and virtual interviews with customers}
-            \resumeItem{Launched and tested MVP with 50+ users, including online community and device database using Next.js}
+            \resumeItem{\textbf{Launched and tested MVP with 50+ users}, including online community and device database using Next.js}
           \resumeItemListEnd
       \resumeEntry
           {Full-Stack Engineer}{}{Feb 2016 -- Jul 2018}
           \resumeItemListStart
             \resumeItem{Designed and built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
-            \resumeItem{Surpassed 290K+ downloads and 3,900+ reviews on Play Store and responded to 1,500+ user feedbacks}
+            \resumeItem{\textbf{\color{customred}Surpassed 290K+ downloads and 3,900+ reviews} on Play Store and responded to 1,500+ user feedbacks}
             \resumeItem{Improved realtime audio playback performance by 400\%, enabling 16-channel playback on low-end devices}
             \resumeItem{Developed a companion web application for creating custom in-app contents from audio assets}
           \resumeItemListEnd
@@ -193,8 +201,8 @@
       {Frontend Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
       \resumeItemListStart
         \resumeItem{Developed \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built using React and React Native}
-        \resumeItem{Contributed 15K+ lines of code, collaborating with 3 engineers and 2 designers in 2-week sprints}
-        \resumeItem{Enhanced user experience by reducing page load time to \textasciitilde{}100ms with AWS CloudFront CDN}
+        \resumeItem{\textbf{Contributed 15K+ lines of code, collaborating with 3 engineers and 2 designers in 2-week sprints}}
+        \resumeItem{Enhanced user experience by identifying and improving page load time to \textasciitilde{}100ms with AWS CloudFront CDN}
         \resumeItem{Increased deployment speed and frequency by 5 times with creating CI/CD pipelines using Buddy}
       \resumeItemListEnd
 
@@ -208,12 +216,12 @@
     \resumeEntry
       {Software Engineer}{M+ Education Institution}{May 2019 -- Jul 2019}
       \resumeItemListStart
-        \resumeItem{Created a student/employee time tracking system for Android phones and kiosks, currently in production for \\ 3+ years, managing 500+ students and 80+ employees}
+        \resumeItem{Created a student/employee time tracking system for Android phones and kiosks, \textbf{currently in production for \\ 3+ years, managing 500+ students and 80+ employees}}
         \resumeItem{Implemented a serverless SMS notification service using Firebase, handling 1K+ messages per month less than \$1}
         \resumeItem{Reduced server costs by \textasciitilde{}95\% and optimized average request latency to 50ms with client-side caching}
       \resumeItemListEnd
 
-    % \resumeSubheading
+    % \resumeEntry
     %   {Sergeant}{Jan 2021 -- Jul 2022}
     %   {Republic of Korea Army}{South Korea}
       % \resumeItemListStart
