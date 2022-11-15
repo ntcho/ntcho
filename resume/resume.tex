@@ -20,6 +20,7 @@
 \usepackage{tabularx}
 \usepackage{contour}
 \usepackage{ulem}
+\usepackage{array}
 \input{glyphtounicode}
 
 
@@ -43,11 +44,12 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\usepackage[bottom=0.4in,top=0.6in, left=0.5in, right=0.5in]{geometry}
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -82,25 +84,22 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeEntry}[3]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
+      \textbf{#1} & \textit{\small#2} & {#3} \\
+    \end{tabular*}\vspace{-5.5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -109,8 +108,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.25in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5.5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,57 +121,101 @@
 \begin{center}
     \textbf{\Huge Nathan Cho} \\ \vspace{8pt}
     \small 
-    \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
-    $|$ \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
-    $|$ \href{https://ntcho.me}{\myuline{ntcho.me}} 
-    $|$ \href{https://linkedin.com/in/ntcho}{\myuline{linkedin.com/in/ntcho}} 
-    $|$ \href{https://github.com/ntcho}{\myuline{github.com/ntcho}}
+    % \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
+    % $|$ 
+    \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
+    $|$ 
+    % \href{https://ntcho.me}{\myuline{ntcho.me}} 
+    % $|$ 
+    \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
+    $|$ 
+    \href{https://github.com/ntcho}{\myuline{GitHub}}
+    $|$ 
+    \href{https://www.google.com/maps/place/Annandale-On-Hudson,+NY/}{\myuline{Annandale-on-Hudson, NY}} 
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bard College}{Annandale-on-Hudson, NY}
-      {Bachelor of Arts in Computer Science}{Aug 2022 -- May 2024}
-    \resumeSubheading
-      {Chung-Ang University}{Seoul, South Korea}
-      {Bachelor of Engineering in Computer Science and Engineering}{Mar 2019 -- Dec 2020}
-      \resumeItemListStart
-        \resumeItem{Transferred to Bard College after completing 4 semesters and military service}
-        \resumeItem{Study abroad at Stony Brook University in Spring 2020}
-      \resumeItemListEnd
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.11in, label={}]
+    \small{\item{
+     \textbf{Languages}   \hspace{5.5mm} {JavaScript, TypeScript, Python, Java, HTML/CSS, SQL, Regular Expression, R} \\
+     \vspace{1pt}
+     \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, Material-UI, NumPy, MongoDB, Docker, AWS} \\
+     \vspace{1pt}
+     \textbf{Other}       \hspace{13mm} {UI/UX design, API design, CI/CD, open source contribution, user research}
+    }}\vspace{-4pt}
+ \end{itemize}
 
-  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeEntry
+          {Hackathon Team Lead}{}{Sep 2021 -- Oct 2021}
+          \resumeItemListStart
+            \resumeItem{Proposed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- web-based knowledge base software designed for military intranet}
+            \resumeItem{Led team of 5 including engineers and designers with agile methodologies, completing the project in 5 weeks}
+            \resumeItem{Arthitected the RESTful API including access management, collaborative editing and version control functionality}
+            \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
+            \resumeItem{Winner of the Chief of Naval Operations Award (4th out of 70 teams) in the national open source hackathon}
+          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{work.elastic}}{Sep 2022 -- Current}
+      %     \resumeItemListStart
+      %       \resumeItem{Founded work.elastic -- employee work-life balance analytics platform}
+      %       \resumeItem{Recruited interdisciplinary (PR, design, engineer) team of 6 from Columbia, Lithuania and United States}
+      %       \resumeItem{Devised initial idea, key features, business model; currently in user research phase}
+      %     \resumeItemListEnd
+      \resumeEntry
+          {Co-founder, Software Engineer}{}{Aug 2021 -- Aug 2022}
+          \resumeItemListStart
+            \resumeItem{Co-founded and launched \textbf{Fuhome} --- smart home (home automation) gadget e-commerce \& user community}
+            \resumeItem{Identified target users by conducting surveys with 100+ participants and virtual interviews with customers}
+            \resumeItem{Launched and tested MVP with 50+ users, including online community and device database using Next.js}
+          \resumeItemListEnd
+      \resumeEntry
+          {Full-Stack Engineer}{}{Feb 2016 -- Jul 2018}
+          \resumeItemListStart
+            \resumeItem{Designed and built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
+            \resumeItem{Surpassed 290K+ downloads and 3,900+ reviews on Play Store and responded to 1,500+ user feedbacks}
+            \resumeItem{Increased realtime audio playback performance by 400\%, enabling 16-channel playback on low-end devices}
+            \resumeItem{Developed a companion web app that creates custom in-app contents from audio assets}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Lead Frontend Developer}{Dec 2019 -- Jan 2021}
-      {myworkbeat Inc.}{Seoul, South Korea}
+    \resumeEntry
+      {Frontend Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
       \resumeItemListStart
-        \resumeItem{Launched \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- a community-based gig job platform, built using React and React Native}
-        \resumeItem{Collaborated with 3 other developers and 2 external designers through 2-week sprints}
-        \resumeItem{Enhanced user experience by reducing latency down to \textasciitilde{}100ms with AWS CloudFront}
-        \resumeItem{Accelerated deployment by 90\% with automating CI/CD pipelines on Buddy.Works}
+        \resumeItem{Developed \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- a community-based gig job platform, built using React and React Native}
+        \resumeItem{Collaborated with 3 engineers and 2 designers in 2-week sprints, contributing 15K+ lines of code}
+        \resumeItem{Enhanced user experience by reducing page load time to \textasciitilde{}100ms with AWS CloudFront CDN}
+        \resumeItem{Accelerated deployment speed by 90\% with creating CI/CD pipelines using Buddy}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Android Developer}{May 2019 -- Jul 2019}
-      {M+ Education Institution}{Remote, South Korea}
+    \resumeEntry
+      {Software Engineer (Contract)}{Hyosung Heavy Industries}{Aug 2019 -- Dec 2019}
       \resumeItemListStart
-        \resumeItem{Created a student/employee attendance recording system for mobile and kiosks, currently managing \\ 500+ students and 80+ employees for more than 3.5 years}
-        \resumeItem{Implemented a serverless SMS service using Firebase, operating at less than \$1 per month}
-        \resumeItem{Reduced costs by \textasciitilde{}95\% and average latency to 50ms with client-side request caching}
+        \resumeItem{Built and operated a safety inspection web application for hydrogen fuel cell vehicle charging stations}
+        \resumeItem{Rolled out customizable check sheet, video upload and PDF export features used by 200+ field inspectors}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Sergeant}{Jan 2021 -- Jul 2022}
-      {Republic of Korea Army}{South Korea}
+    \resumeEntry
+      {Software Engineer}{M+ Education Institution}{May 2019 -- Jul 2019}
+      \resumeItemListStart
+        \resumeItem{Created a student/employee time tracking system for Android phones and kiosks, currently in production for \\ 3+ years, managing 500+ students and 80+ employees}
+        \resumeItem{Implemented a serverless SMS notification service using Firebase, handling 1K+ messages per month less than \$1}
+        \resumeItem{Reduced server costs by \textasciitilde{}95\% and optimized average request latency to 50ms with client-side caching}
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Sergeant}{Jan 2021 -- Jul 2022}
+    %   {Republic of Korea Army}{South Korea}
       % \resumeItemListStart
       %   \resumeItem{Increased productivity by 5 times automating hand-written documents into spreadsheets}
       %   \resumeItem{Improved hourly intervals into second retrieving vehicle entry logs using JavaScript}
@@ -181,55 +224,20 @@
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Handover} $|$ \textit{React, Node.js, MongoDB, Docker, Git}}{Sep 2021 -- Oct 2021}
-          \resumeItemListStart
-            \resumeItem{Proposed, designed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- secure open-source knowledge base software for military use; \\ part of yearly hackathon held by the Korean Ministry of National Defense}
-            \resumeItem{Awarded the Chief of Naval Operations Award (4th place out of 70 teams nationwide)}
-            \resumeItem{Managed a cross-functional (product, engineering, design) 5-member remote team with agile methodologies, successfully completing the project in 5 weeks}
-            \resumeItem{Maintained code quality by creating documentations and reviewing 90+ pull requests}
-            \resumeItem{Optimized development and deployment process with dockerizing into 4 microservices and using Docker Compose, reducing build/deploy times by \textasciitilde{}80\%}
-          \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{work.elastic}}{Sep 2022 -- Current}
-      %     \resumeItemListStart
-      %       \resumeItem{Founded work.elastic -- employee analytics platform improving work-life balance}
-      %       \resumeItem{Devised initial idea, key features, business model; currently in user research phase}
-      %       \resumeItem{Recruited interdisciplinary (PR, design, engineer) team from Columbia, Lithuania, US}
-      %     \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Fuhome} $|$ \textit{React, Next.js}}{Aug 2021 -- Aug 2022}
-          \resumeItemListStart
-            \resumeItem{Co-founded Fuhome --- all-in-one smart home (home automation) commerce \& community}
-            \resumeItem{Launched and tested MVP, including user community and device database using Next.js}
-            \resumeItem{Identified target users by conducting surveys and interviews with 100+ participants}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Tapad} $|$ \textit{Android, JavaScript}}{Feb 2016 -- Jul 2018}
-          \resumeItemListStart
-            \resumeItem{Built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- touchscreen based MIDI controller for Android; an easy-to-use and customizable \\ mobile DJ tool to recreate and remix songs}
-            \resumeItem{Surpassed 290,000+ downloads on Play Store with 3,900+ reviews at 4.1 out of 5}
-            \resumeItem{Handled over 1,000 user feedbacks about feature requests and performance issues}
-            \resumeItem{Developed a separate web app for users to add new songs, using a custom XML format}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.1in, label={}]
-    \small{\item{
-     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, Regular Expression, SQL, C/C++, HTML, CSS, R} \\
-     \textbf{Frameworks}{: React, React Native, Next.js, SCSS, Android, Node.js, Jest, MUI, Tailwind, bash, pandas, NumPy, Matplotlib} \\
-     \textbf{Tools}{: GitHub, Slack, Figma, Trello, Notion, Amazon Web Services, Firebase, MongoDB, Docker, Nginx, VSCode, IntelliJ, Microsoft Office, Google Workspaces, Adobe Creative Cloud}
-    }}
- \end{itemize}
-
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bard College}{Aug 2022 -- May 2024}
+      {Bachelor of Arts in Computer Science}{Annandale-on-Hudson, NY}
+    \resumeSubheading
+      {Chung-Ang University}{Mar 2019 -- Dec 2020}
+      {Bachelor of Engineering in Computer Science and Engineering}{Seoul, South Korea}
+      \resumeItemListStart
+        \resumeItem{\textbf{GPA: 3.9/4.0}, Ranked in top 10 university for Computer Science in Korea}
+        \resumeItem{Study abroad at Stony Brook University \textit{(Spring 2020)}, leave due to military service \textit{(Jan 2021 -- Jul 2022)}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
