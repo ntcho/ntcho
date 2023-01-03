@@ -1,0 +1,277 @@
+%-------------------------
+% Resume in Latex
+% Author : Nathan Cho
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{contour}
+\usepackage{ulem}
+\usepackage{array}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+\usepackage[default,regular,semibold]{sourceserifpro}
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Custom colors
+\definecolor{titlecolor}{RGB}{39, 68, 130}
+\definecolor{customblue}{RGB}{31, 63, 162}
+\definecolor{customred}{RGB}{140, 26, 17}
+
+% Adjust margins
+\usepackage[bottom=0.4in,top=0.6in, left=0.5in, right=0.5in]{geometry}
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \color{customblue}\vspace{-4pt}\scshape\raggedright\large\textbf
+}{}{0em}{}[\color{customblue}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Better underline (from https://alexwlchan.net/2017/10/latex-underlines/)
+\renewcommand{\ULdepth}{2.2pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \hspace{-1.5pt}\textbf{#1} & #2 \\
+      \hspace{-1.5pt}\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\resumeEntry}[3]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
+      \hspace{-1.5pt}\textbf{#1} & \textit{\small#2} & {#3} \\
+    \end{tabular*}\vspace{-5.5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.22in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5.7pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\color{titlecolor}\Huge Nathan Cho} \\ \vspace{8pt}
+    \small 
+    % \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
+    % $|$ 
+    \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
+    $|$ 
+    % \href{https://ntcho.me}{\myuline{ntcho.me}} 
+    % $|$ 
+    \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
+    $|$ 
+    \href{https://github.com/ntcho}{\myuline{GitHub}}
+    $|$ 
+    \href{https://www.google.com/maps/place/Annandale-On-Hudson,+NY/}{\myuline{Annandale-on-Hudson, NY}} 
+\end{center}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.08in, label={}]
+    \vspace{1pt}
+    \small{\item{
+     \textbf{Tools}   \hspace{11mm} {Microsoft Office, Google Workspace, Figma, Adobe Create Cloud (Photoshop, Premiere Pro)} \\
+     \vspace{1pt}
+     \textbf{Languages}   \hspace{2.5mm} {English, Korean} \\
+     \vspace{1pt}
+     \textbf{Others}   \hspace{8.8mm} {Event photography \& videography, Website design \& development}
+    }}\vspace{-4pt}
+ \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bard College}{Aug 2022 -- May 2024}
+      {Bachelor of Arts in Computer Science}{Annandale-on-Hudson, NY}
+    \resumeSubheading
+      {Chung-Ang University}{Mar 2019 -- Dec 2020}
+      {Bachelor of Engineering in Computer Science and Engineering}{Seoul, South Korea}
+      \resumeItemListStart
+        \resumeItem{\textbf{GPA: 3.9/4.0}, Ranked in the top 10 universities for Computer Science in Korea}
+        \resumeItem{Study abroad at Stony Brook University \textit{(Spring 2020)}, leave due to military service \textit{(Jan 2021 -- Jul 2022)}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeEntry
+          {Hackathon Team Lead}{}{Sep 2021 -- Oct 2021}
+          \resumeItemListStart
+            \resumeItem{Proposed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- web-based knowledge base software designed for military intranet}
+            \resumeItem{Winner of the \textbf{\color{customred}Chief of Naval Operations Award (4th out of 70 teams) in the national open-source hackathon}}
+            \resumeItem{Led a team of 5, including engineers and designers, completing the project in 5 weeks using agile methodologies}
+            % \resumeItem{\textbf{Architected the RESTful API, supporting access management, collaborative editing and version control}}
+            % \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
+          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{work.elastic}}{Sep 2022 -- Current}
+      %     \resumeItemListStart
+      %       \resumeItem{Founded work.elastic -- employee work-life balance analytics platform}
+      %       \resumeItem{Recruited interdisciplinary (PR, design, engineer) team of 6 from Columbia, Lithuania and United States}
+      %       \resumeItem{Devised initial idea, key features, business model; currently in user research phase}
+      %     \resumeItemListEnd
+      \resumeEntry
+          {Co-founder, Software Engineer}{}{Aug 2021 -- Aug 2022}
+          \resumeItemListStart
+            \resumeItem{Co-founded and launched \textbf{Fuhome} --- smart home (home automation) gadget e-commerce \& user community}
+            \resumeItem{Identified target users by conducting surveys with 100+ participants and virtual interviews with customers}
+            % \resumeItem{\textbf{Launched and tested MVP with 50+ users}, including online community and device database using Next.js}
+          \resumeItemListEnd
+      \resumeEntry
+          {Full-Stack Engineer}{}{Feb 2016 -- Jul 2018}
+          \resumeItemListStart
+            \resumeItem{Designed and built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
+            \resumeItem{\textbf{\color{customred}Surpassed 290K+ downloads and 3,900+ reviews} on Play Store and responded to 1,500+ user feedbacks}
+            % \resumeItem{Improved real-time audio playback performance by 400\%, enabling 16-channel playback on low-end devices}
+            \resumeItem{Developed a companion web application for creating custom in-app content from audio assets}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experiences}
+  \resumeSubHeadingListStart
+
+    \resumeEntry
+      {Frontend Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
+      \resumeItemListStart
+        \resumeItem{Developed \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- a local gig job listing/payment platform, built using React and React Native}
+        \resumeItem{\textbf{Contributed 15K+ lines of code, collaborating with 3 engineers and 2 designers in 2-week sprints}}
+        % \resumeItem{Enhanced user experience by identifying and improving page load time to \textasciitilde{}100ms with AWS CloudFront CDN}
+        % \resumeItem{Increased deployment speed and frequency by 5 times by creating CI/CD pipelines using Buddy}
+      \resumeItemListEnd
+
+    \resumeEntry
+      {Software Engineer (Contract)}{Hyosung Heavy Industries}{Aug 2019 -- Dec 2019}
+      \resumeItemListStart
+        \resumeItem{Built and operated a safety inspection web application for hydrogen fuel cell vehicle charging stations}
+        \resumeItem{Rolled out customizable check sheet, video upload and PDF export features used by 200+ field inspectors}
+      \resumeItemListEnd
+
+    \resumeEntry
+      {Software Engineer}{M+ Education Institution}{May 2019 -- Jul 2019}
+      \resumeItemListStart
+        \resumeItem{Created a student/employee time tracking system for Android phones and kiosks, \textbf{currently in production for \\ 3+ years, managing 500+ students and 80+ employees}}
+        \resumeItem{Implemented a serverless SMS notification service using Firebase, handling 1K+ messages per month for less than \$1}
+        % \resumeItem{Reduced server costs by \textasciitilde{}95\% and optimized average request latency to 50ms with client-side caching}
+      \resumeItemListEnd
+
+    % \resumeEntry
+    %   {Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
+    %   % \resumeItemListStart
+    %   %   \resumeItem{Increased productivity by 5 times automating hand-written documents into spreadsheets}
+    %   %   \resumeItem{Improved hourly intervals into second retrieving vehicle entry logs using JavaScript}
+    % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+  \section{Additional Experiences}
+  \resumeSubHeadingListStart
+
+    \resumeEntry
+      {Student Life Committee}{Bard Student Government}{Sep 2022 -- Current}
+      \resumeItemListStart
+        \resumeItem{Organized multiple student engagement events including Thanksgiving dinner attracting 100+ participants}
+        \resumeItem{Tackled problems with student academics, housing, mental \& physical health with multiple departments}
+      \resumeItemListEnd
+
+      \resumeEntry
+        {Youth Group Leader}{Gwanak Prestyberian Church}{Feb 2018 -- Jan 2021}
+        \resumeItemListStart
+          \resumeItem{Mentored 15+ teenagers with their academics and organized yearly gatherings for 3 years}
+        \resumeItemListEnd
+
+    % \resumeEntry
+    %   {Sergeant}{Jan 2021 -- Jul 2022}
+    %   {Republic of Korea Army}{South Korea}
+      % \resumeItemListStart
+      %   \resumeItem{Increased productivity by 5 times automating hand-written documents into spreadsheets}
+      %   \resumeItem{Improved hourly intervals into second retrieving vehicle entry logs using JavaScript}
+    % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\end{document}
