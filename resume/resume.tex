@@ -93,19 +93,26 @@
 \newcommand{\resumeSubheading}[4]{
   \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \hspace{-1.5pt}\textbf{#1} & #2 \\
-      \hspace{-1.5pt}\textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-10pt}
+      \hspace{-1.5pt}\textbf{#1} & \textbf{#2} \\
+      \hspace{-1.5pt}{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
 }
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\newcommand{\resumeEntry}[3]{
+\newcommand{\resumeExperienceEntry}[3]{
   \item
     \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
-      \hspace{-1.5pt}\textbf{#1} & \textit{\small#2} & {#3} \\
+      \hspace{-1.5pt}\textbf{#1} & {\small#2} & \textbf{#3} \\
+    \end{tabular*}\vspace{-5.5pt}
+}
+
+\newcommand{\resumeProjectEntry}[4]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{L{5.85in} R{1.5in}}
+      \hspace{-1.5pt}\textbf{#1} -- \textbf{\small#2} $|$ {\small#3} & \textbf{#4} \\
     \end{tabular*}\vspace{-5.5pt}
 }
 
@@ -127,10 +134,10 @@
 \begin{center}
   \textbf{\color{titlecolor}\Huge Nathan Cho} \\ \vspace{8pt}
   \small 
-  % \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
-  % $|$ 
   \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
   $|$ 
+  % \href{tel:+1-845-861-5879}{\myuline{{(845) 861-5879}}} 
+  % $|$ 
   % \href{https://ntcho.me}{\myuline{ntcho.me}} 
   % $|$ 
   \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
@@ -147,7 +154,7 @@
 
   \resumeSubheading
     {Bard College}{Aug 2022 -- May 2024}
-    {Bachelor of Arts in Computer Science, \textbf{GPA: 4.0}}{Annandale-on-Hudson, New York}
+    {B.A. in Computer Science, \textbf{GPA: 4.0}}{Annandale-on-Hudson, New York, United States}
 
     \resumeItemListStart
       \resumeItem{Full tuition scholarship recipient, Founder of Bard Computer Science Club, Member of Student Government}
@@ -157,11 +164,10 @@
 
   \resumeSubheading
     {Chung-Ang University}{Mar 2019 -- Dec 2020}
-    {Bachelor of Engineering in Computer Science and Engineering, \textbf{GPA: 3.9}}{Seoul, South Korea}
+    {B.Eng. in Computer Science and Engineering \textit{(transferred to Bard College)}, \textbf{GPA: 3.9}}{Seoul, South Korea}
 
     \resumeItemListStart
-      \resumeItem{Study abroad at Stony Brook University \textit{(Spring 2020)}, leave due to military service \textit{(Jan 2021 -- Jul 2022)}}
-      \resumeItem{Ranked in top 10 Computer Science universities in Korea}
+      \resumeItem{Ranked in top 10 Computer Science programs in Korea, Study abroad at Stony Brook University \textit{(Spring 2020)}}
     \resumeItemListEnd
 
   \vspace{-4pt}
@@ -174,11 +180,11 @@
 \begin{itemize}[leftmargin=0.08in, label={}]
   \vspace{1pt}
   \small{\item{
-  \textbf{Languages}   \hspace{5.5mm} {JavaScript, TypeScript, Python, Java, HTML/CSS, SQL, R, Regular Expression} \\
+  \textbf{Languages}   \hspace{5.5mm} {JavaScript, TypeScript, Python, Java, C/C++, HTML/CSS, SQL, R, Regular Expression} \\
   \vspace{1.2pt}
-  \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, Material-UI, NumPy, MongoDB, Docker, AWS, Git} \\
+  \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, NumPy, PyTorch, MongoDB, Docker, AWS, Git} \\
   \vspace{1pt}
-  \textbf{Other}       \hspace{13mm} {Enterpreneurship, API design, CI/CD, Open source contribution, UI/UX design, User research}
+  \textbf{Other}       \hspace{13mm} {API design, CI/CD, Open source contribution, UI/UX design, User research}
   }}\vspace{-4pt}
 \end{itemize}
 
@@ -187,36 +193,36 @@
 \section{Experiences}
 \resumeSubHeadingListStart
 
-  \resumeEntry
-    {Frontend Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
+  \resumeExperienceEntry
+    {Engineer Sergeant}{Republic of Korea Army, 1st Corps}{Jan 2021 -- Jul 2022}
     \resumeItemListStart
-      \resumeItem{Developed \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built using React and React Native}
-      \resumeItem{\textbf{\color{customred}Spearheaded the initial web app launch by contributing 15K+ lines of code, reaching 1,000+ users}}
-      \resumeItem{Identified page load bottleneck issue from user analytics and improved the latency to \textasciitilde{}100ms using AWS CDN}
+      \resumeItem{Pioneered and operated a new monitoring system for tactical communication network, achieving 98\% uptime}
+      \resumeItem{Oversaw a squad of 6 combat engineers for 10 months, winning the Team of the Year Award from Major General}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
+    \resumeItemListStart
+      \resumeItem{Developed and launched \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built with React and deployed on AWS}
+      \resumeItem{Spearheaded the initial web app launch by contributing 15K+ lines of code, reaching 1,000+ monthly users}
+      \resumeItem{Identified page load bottleneck issue from user analytics and improved the latency to \textasciitilde{}100ms using CDN}
       \resumeItem{Streamlined deployment and testing by implementing CI/CD pipelines, increasing deploy frequency by 500\%}
     \resumeItemListEnd
 
-  % \resumeEntry
-  %   {Software Engineer (Contract)}{Hyosung Heavy Industries}{Aug 2019 -- Dec 2019}
-  %   \resumeItemListStart
-  %     \resumeItem{Built and operated a safety inspection web application for hydrogen fuel cell vehicle charging stations}
-  %     \resumeItem{Rolled out customizable check sheet, video upload and PDF export features used by 200+ field inspectors}
-  %   \resumeItemListEnd
-
-  \resumeEntry
-    {Software Engineer Intern}{M+ Education Institution}{May 2019 -- Jul 2019}
+  \resumeExperienceEntry
+    {Software Engineer Intern}{Hyosung Corporation}{Aug 2019 -- Dec 2019}
     \resumeItemListStart
-      \resumeItem{Created a time tracking system for phones and kiosks, \textbf{currently used by 500+ students and 80+ employees}}
+      \resumeItem{Launched a safety inspection web application for 30+ hydrogen fuel cell vehicle charging stations with Node.js}
+      \resumeItem{Rolled out customizable form, video upload and analytics report features used by 200+ field inspectors}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Software Engineer Intern}{M+ Learning Institute}{May 2019 -- Jul 2019}
+    \resumeItemListStart
+      \resumeItem{Created a time tracking system for Android phones and kiosks, currently used by 500+ students and 80+ employees}
       \resumeItem{Engineered a serverless SMS service using Firebase, sending 2,500+ notifications for less than \$1 per month}
       \resumeItem{Decreased server expense and average latency by 90\% with client-side request caching optimization}
     \resumeItemListEnd
-
-  % \resumeEntry
-  %   {Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
-  %   \resumeItemListStart
-  %     \resumeItem{Increased productivity by 5 times automating hand-written documents into spreadsheets}
-  %     \resumeItem{Improved hourly intervals into second retrieving vehicle entry logs using JavaScript}
-  %   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -225,46 +231,57 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
-  \resumeEntry
-    {\textbf{Founder}}{}{Sep 2022 -- Current}
+  \resumeProjectEntry
+    {\href{https://bit.ly/ntcho_workelastic_rb}{\myuline{work.elastic}}}
+    {People data analytics platform for SMBs}
+    {Next.js, PyTorch}
+    {Sep 2022 -- Current}
     \resumeItemListStart
-      \resumeItem{Founded start-up \textbf{work.elastic} -- people data analytics platform for small to medium size businesses}
-      \resumeItem{\textbf{Recruited multidisciplinary (legal, design, engineer) team of 6} from Columbia, Lithuania and United States}
-      \resumeItem{Developed a machine learning algorithm that can predict employee turnover with 97\% accuracy}
+      % \resumeItem{Founded start-up \textbf{work.elastic} -- people data analytics platform for small to medium size businesses}
+      \resumeItem{Developed and trained a machine learning model that can predict employee turnover with 97\% accuracy}
+      \resumeItem{Recruited and operated a multidisciplinary (legal, design, HR) team of 6 from Columbia, Lithuania and U.S.}
       % \resumeItem{Devised business model; currently in user research phase}
     \resumeItemListEnd
 
-  \resumeEntry
-    {Software Engineer}{}{Sep 2022 -- Nov 2022}
+  \resumeProjectEntry
+    {\href{https://bit.ly/ntcho_mapple}{\myuline{Mapple}}}
+    {Local experience curator app}
+    {React Native, Google Cloud}
+    {Sep 2022 -- Nov 2022}
     \resumeItemListStart
-      \resumeItem{Developed \href{https://bit.ly/ntcho_mapple}{\myuline{\textbf{Mapple}}} --- local experience curator app built with Google Maps API and React Native}
-      \resumeItem{Awarded \textbf{\color{customred}2nd place in a hackathon hosted by Google}, leading a team of 4 to win among 130 competing teams}
-      \resumeItem{Designed the ranking algorithm for place recommendations, seamlessly integrated with API and user experience}
+      % \resumeItem{Developed \href{}{\myuline{\textbf{Mapple}}} --- local experience curator app built with Google Maps API and React Native}
+      \resumeItem{Awarded 2nd place in a hackathon hosted by Google, leading a team of 4 to win among 130 competing teams}
+      \resumeItem{Designed the ranking algorithm for place recommendations, integrating Google Maps API into user experience}
     \resumeItemListEnd
 
-  \resumeEntry
-    {Co-founder, Software Engineer}{}{Aug 2021 -- Aug 2022}
+  % \resumeExperienceEntry
+  %   {Co-founder, Software Engineer}{}{Aug 2021 -- Aug 2022}
+  %   \resumeItemListStart
+  %     \resumeItem{Co-founded and launched \textbf{Fuhome} --- e-commerce \& user community for smart home devices}
+  %     \resumeItem{Launched MVP using Next.js after conducting \textbf{user research surveys and interviews with 100+ participants}}
+  %   \resumeItemListEnd
+
+  \resumeProjectEntry
+    {\href{https://bit.ly/ntcho_handover}{\myuline{Handover}}}
+    {Knowledge base SaaS for military intranet}
+    {React, MongoDB, Docker}
+    {Sep 2021 -- Oct 2021}
     \resumeItemListStart
-      \resumeItem{Co-founded and launched \textbf{Fuhome} --- e-commerce \& user community for smart home devices}
-      \resumeItem{Launched MVP using Next.js after conducting \textbf{user research surveys and interviews with 100+ participants}}
+      \resumeItem{Winner of the Chief of Naval Operations Award (4th out of 70 teams) in the national open-source hackathon}
+      \resumeItem{Directed a 5-member remote team for 7 weeks, organizing 10+ meetings and reviewing 90+ pull requests}
+      \resumeItem{Architected the RESTful API including access management, collaborative editing and version control features}
+      \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
     \resumeItemListEnd
 
-  \resumeEntry
-    {Technical Project Manager}{}{Sep 2021 -- Oct 2021}
+  \resumeProjectEntry
+    {\href{https://bit.ly/ntcho_tapad}{\myuline{Tapad}}}
+    {Mobile music remixer}
+    {Android, Firebase}
+    {Feb 2016 -- Jul 2018}
     \resumeItemListStart
-      \resumeItem{Proposed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- web-based knowledge base software designed for military intranet}
-      \resumeItem{Winner of the \textbf{\color{customred}Chief of Naval Operations Award (4th out of 70 teams) in the national open-source hackathon}}
-      \resumeItem{\textbf{Directed a 5-member remote team for 7 weeks}, organizing 10+ meetings and reviewing 90+ pull requests}
-      \resumeItem{Architected the RESTful API with access management, collaborative editing and version control}
-      % \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
-    \resumeItemListEnd
-
-  \resumeEntry
-    {Full-Stack Software Engineer}{}{Feb 2016 -- Jul 2018}
-    \resumeItemListStart
-      \resumeItem{Designed and built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
-      \resumeItem{\textbf{\color{customred}Surpassed 300,000+ users and 3,900+ reviews} on Play Store and resolved 1,500+ support tickets}
-      \resumeItem{Improved real-time audio playback performance by 400\% with memory optimization, enabling 16-channel playback}
+      % \resumeItem{Designed and built solo project \href{}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
+      \resumeItem{Surpassed 300,000+ installs and 3,900+ reviews on Play Store and resolved 1,500+ tickets as a solo developer}
+      \resumeItem{Implemented memory optimization, leading to 85\% less crashes and enabling real-time 16-channel audio playback}
       % \resumeItem{Developed a companion web application for creating custom in-app content from audio assets}
     \resumeItemListEnd
 
