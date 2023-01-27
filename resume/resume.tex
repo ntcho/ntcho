@@ -50,7 +50,7 @@
 \definecolor{customred}{RGB}{140, 26, 17}
 
 % Adjust margins
-\usepackage[bottom=0.4in,top=0.6in, left=0.5in, right=0.5in]{geometry}
+\usepackage[bottom=0.45in,top=0.55in, left=0.5in, right=0.5in]{geometry}
 % \addtolength{\oddsidemargin}{-0.5in}
 % \addtolength{\evensidemargin}{-0.5in}
 % \addtolength{\textwidth}{1in}
@@ -104,8 +104,11 @@
 
 \newcommand{\resumeExperienceEntry}[3]{
   \item
-    \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
-      \hspace{-1.5pt}\textbf{#1} & {\small#2} & \textbf{#3} \\
+    % \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
+    %   \hspace{-1.5pt}\textbf{#1} & {\small#2} & \textbf{#3} \\
+    % \end{tabular*}\vspace{-5.5pt}
+    \begin{tabular*}{0.98\textwidth}{L{5.85in} R{1.5in}}
+      \hspace{-1.5pt}\textbf{#1} $|$ {\small#2} & \textbf{#3} \\
     \end{tabular*}\vspace{-5.5pt}
 }
 
@@ -131,21 +134,26 @@
 \begin{document}
 
 %----------HEADING----------
-\begin{center}
-  \textbf{\color{titlecolor}\Huge Nathan Cho} \\ \vspace{8pt}
-  \small 
-  \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
-  $|$ 
-  % \href{tel:+1-845-861-5879}{\myuline{{(845) 861-5879}}} 
-  % $|$ 
-  % \href{https://ntcho.me}{\myuline{ntcho.me}} 
-  % $|$ 
-  \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
-  $|$ 
-  \href{https://github.com/ntcho}{\myuline{GitHub}}
-  $|$ 
-  \href{https://www.google.com/maps/place/Annandale-On-Hudson,+NY/}{\myuline{Annandale-on-Hudson, NY}} 
-\end{center}
+\begin{tabular*}{0.98\textwidth}{L{3.72in} R{3.72in}}
+  \hspace{-3pt}{
+    \textbf{\color{titlecolor}\Huge Nathan Cho}
+    \newline\vspace{4pt}
+    \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}}
+    $|$
+    \href{tel:+18458615879}{\myuline{(845) 861-5879}} 
+    % {-------------------------------}
+  } & {
+    \newline\vspace{-18pt}
+    \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
+    $|$
+    \href{https://github.com/ntcho}{\myuline{GitHub}}
+    \newline\vspace{1.5pt}
+    {JavaScript, Python, Java}
+    \newline\vspace{1.5pt}
+    % {---------------------------------}
+    {New York City Metropolitan Area}
+  } \\
+\end{tabular*}\vspace{-4pt}
 
 
 %-----------EDUCATION-----------
@@ -154,7 +162,7 @@
 
   \resumeSubheading
     {Bard College}{Aug 2022 -- May 2024}
-    {B.A. in Computer Science, \textbf{GPA: 4.0}}{Annandale-on-Hudson, New York, United States}
+    {Bachelor of Arts in Computer Science, \textbf{GPA: 4.0}}{Hudson Valley, New York, United States}
 
     \resumeItemListStart
       \resumeItem{Full tuition scholarship recipient, Founder of Bard Computer Science Club, Member of Student Government}
@@ -164,7 +172,7 @@
 
   \resumeSubheading
     {Chung-Ang University}{Mar 2019 -- Dec 2020}
-    {B.Eng. in Computer Science and Engineering \textit{(transferred to Bard College)}, \textbf{GPA: 3.9}}{Seoul, South Korea}
+    {Bachelor of Engineering in Computer Science, \textbf{GPA: 3.9} \textit{(transferred to Bard College)}}{Seoul, South Korea}
 
     \resumeItemListStart
       \resumeItem{Ranked in top 10 Computer Science programs in Korea, Study abroad at Stony Brook University \textit{(Spring 2020)}}
@@ -176,13 +184,13 @@
 
 
 %-----------EXPERIENCE-----------
-\section{Experiences}
+\section{Experience}
 \resumeSubHeadingListStart
 
   \resumeExperienceEntry
-    {Engineer Sergeant}{Republic of Korea Army, 1st Corps}{Jan 2021 -- Jul 2022}
+    {Engineer Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
     \resumeItemListStart
-      \resumeItem{Oversaw a squad of 6 combat engineers for 10 months, winning the Team of the Year Award from Major General}
+      \resumeItem{Directed a squad of 6 combat engineers for 10 months, winning the Team of the Year Award from Major General}
       \resumeItem{Pioneered and operated a new monitoring system for tactical communication network, achieving 98\% uptime}
     \resumeItemListEnd
 
@@ -190,17 +198,17 @@
     {Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
     \resumeItemListStart
       \resumeItem{Developed and launched \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built with React and deployed on AWS}
-      \resumeItem{Spearheaded the initial web app launch by contributing 15K+ lines of code, reaching 1,000+ monthly users}
-      \resumeItem{Identified page load bottleneck issue from user analytics and improved the latency to \textasciitilde{}100ms using CDN}
-      \resumeItem{Streamlined deployment and testing by implementing CI/CD pipelines, increasing deploy frequency by 500\%}
+      \resumeItem{Generated initial revenue by integrating payment system, collaborating with the product owner and 2 engineers}
+      \resumeItem{Improved the page response time to \textasciitilde{}100ms using CDN, after identifying server bottleneck issue from user analytics}
+      \resumeItem{Increased deployment frequency by 500\% and introduced automated testing by implementing CI/CD pipelines}
     \resumeItemListEnd
 
   \resumeExperienceEntry
     {Technical Program Manager Intern}{Hyosung Corporation}{Aug 2019 -- Dec 2019}
     \resumeItemListStart
-      \resumeItem{Built and implemented a new internal safety inspection tool used by 30+ fuel cell EV charging stations}
-      \resumeItem{Planned and executed software development lifecycle with agile methodologies, delivering key features in 8 weeks}
-      \resumeItem{Gathered insights from usage data and provided employee health \& safety KPI reports to business stakeholders}
+      \resumeItem{Built and implemented a new internal web app for safety inspection, used by 30+ fuel cell EV charging stations}
+      \resumeItem{Planned and executed the entire project lifecycle with agile methodologies, delivering required features in 8 weeks}
+      \resumeItem{Proposed and reported employee health \& safety KPIs to business stakeholders by analyzing usage data with Python}
     \resumeItemListEnd
 
   \resumeExperienceEntry
@@ -208,25 +216,25 @@
     \resumeItemListStart
       \resumeItem{Created a time tracking system for Android phones and kiosks, currently used by 500+ students and 80+ employees}
       \resumeItem{Engineered a serverless SMS service using Firebase, sending 2,500+ notifications for less than \$1 per month}
-      \resumeItem{Decreased server expense and average latency by 90\% with client-side request caching optimization}
+      \resumeItem{Decreased server costs by 90\% and average response latency by 50\% by optimizing requests with client-side caching}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{Leadership and Achievements}
 \resumeSubHeadingListStart
 
   \resumeProjectEntry
-    {\href{https://bit.ly/ntcho_workelastic_rb}{\myuline{work.elastic}}}
-    {People data analytics platform for SMBs}
+    {\href{https://bit.ly/ntcho_workelastic_rb}{\myuline{PeopleViz}}}
+    {HR data analytics platform for SMBs}
     {Next.js, PyTorch}
     {Sep 2022 -- Current}
     \resumeItemListStart
       % \resumeItem{Founded start-up \textbf{work.elastic} -- people data analytics platform for small to medium size businesses}
-      \resumeItem{Recruited and managed a multidisciplinary (legal, design, HR) team of 6 from Columbia, Lithuania and U.S.}
-      \resumeItem{Developed and trained a machine learning model that can predict employee turnover with 97\% accuracy}
+      \resumeItem{Recruited and managed a multi-disciplinary (legal, design, HR) team of 6 from Columbia, Lithuania and U.S.}
+      \resumeItem{Built a predictive model using neural network algorithm to predict employee turnover risk with 97\% accuracy}
       % \resumeItem{Devised business model; currently in user research phase}
     \resumeItemListEnd
 
@@ -254,8 +262,8 @@
     {React, MongoDB, Docker}
     {Sep 2021 -- Oct 2021}
     \resumeItemListStart
-      \resumeItem{Winner of the Chief of Naval Operations Award (4th out of 70 teams) in the national open-source hackathon}
-      \resumeItem{Directed a 5-member remote team for 7 weeks, organizing 10+ meetings and reviewing 90+ pull requests}
+      \resumeItem{Led a 5-member remote team for 7 weeks, managing schedule and communicating through 15+ weekly / 1:1 meetings}
+      \resumeItem{Winner of the Chief of Naval Operations Award (4th out of 70 teams) in the national military open-source hackathon}
       \resumeItem{Architected the RESTful API including access management, collaborative editing and version control features}
       % \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
     \resumeItemListEnd
@@ -268,14 +276,14 @@
     \resumeItemListStart
       % \resumeItem{Designed and built solo project \href{}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
       \resumeItem{Surpassed 300,000+ installs and 3,900+ reviews on Play Store and resolved 1,500+ tickets as a solo developer}
-      \resumeItem{Implemented memory optimization, leading to 85\% less crashes and enabling real-time 16-channel audio playback}
+      \resumeItem{Reduced app crashes by 85\% and enabled 16-channel audio playback by implementing memory optimization}
       % \resumeItem{Developed a companion web application for creating custom in-app content from audio assets}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 
-%-----------PROGRAMMING SKILLS-----------
+%-----------SKILLS-----------
 \section{Skills}
 \begin{itemize}[leftmargin=0.08in, label={}]
   \vspace{1pt}
@@ -284,7 +292,7 @@
   \vspace{1.2pt}
   \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, NumPy, PyTorch, MongoDB, Docker, AWS, Git} \\
   \vspace{1pt}
-  \textbf{Other}       \hspace{13mm} {API design, CI/CD, Open source contribution, UI/UX design, User research}
+  \textbf{Other}       \hspace{13mm} {Entrepreneurship, API design, CI/CD, Open source contribution, UI/UX design, User research}
   }}\vspace{-4pt}
 \end{itemize}
 
