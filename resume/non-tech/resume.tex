@@ -65,7 +65,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \color{customblue}\vspace{-4pt}\scshape\raggedright\large\textbf
+  \color{customblue}\vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{customblue}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -93,19 +93,29 @@
 \newcommand{\resumeSubheading}[4]{
   \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \hspace{-1.5pt}\textbf{#1} & #2 \\
-      \hspace{-1.5pt}\textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-6pt}
+      \hspace{-1.5pt}\textbf{#1} & \textbf{#2} \\
+      \hspace{-1.5pt}{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
 }
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\newcommand{\resumeEntry}[3]{
+\newcommand{\resumeExperienceEntry}[3]{
   \item
-    \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
-      \hspace{-1.5pt}\textbf{#1} & \textit{\small#2} & {#3} \\
+    % \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
+    %   \hspace{-1.5pt}\textbf{#1} & {\small#2} & \textbf{#3} \\
+    % \end{tabular*}\vspace{-5.5pt}
+    \begin{tabular*}{0.98\textwidth}{L{5.85in} R{1.5in}}
+      \hspace{-1.5pt}\textbf{#1} $|$ {\small#2} & \textbf{#3} \\
+    \end{tabular*}\vspace{-5.5pt}
+}
+
+\newcommand{\resumeProjectEntry}[4]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{L{5.85in} R{1.5in}}
+      \hspace{-1.5pt}\textbf{#1} -- \textbf{\small#2} $|$ {\small#3} & \textbf{#4} \\
     \end{tabular*}\vspace{-5.5pt}
 }
 
@@ -130,139 +140,120 @@
     \small 
     % \href{tel:+1-845-861-5879}{{(845) 861-5879}} 
     % $|$ 
-    \href{mailto:ntcho13@gmail.com}{\myuline{ntcho13@gmail.com}} 
+    \href{mailto:nc5123@bard.edu}{{nc5123@bard.edu}} 
+    $|$
+    \href{tel:+18458615879}{{(845) 861-5879}} 
     $|$ 
-    % \href{https://ntcho.me}{\myuline{ntcho.me}} 
-    % $|$ 
-    \href{https://linkedin.com/in/ntcho}{\myuline{LinkedIn}} 
-    $|$ 
-    \href{https://github.com/ntcho}{\myuline{GitHub}}
-    $|$ 
-    \href{https://www.google.com/maps/place/Annandale-On-Hudson,+NY/}{\myuline{Annandale-on-Hudson, NY}} 
+    \href{https://linkedin.com/in/ntcho}{{linkedin.com/in/ntcho}}
+    \\
+    \vspace{2pt}
+    \href{https://www.google.com/maps/place/Annandale-On-Hudson,+NY/}{{Annandale-on-Hudson, New York}} 
 \end{center}
-
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.08in, label={}]
-    \vspace{1pt}
-    \small{\item{
-     \textbf{Tools}   \hspace{11mm} {Microsoft Office, Google Workspace, Figma, Adobe Create Cloud (Photoshop, Premiere Pro)} \\
-     \vspace{1pt}
-     \textbf{Languages}   \hspace{2.5mm} {English, Korean} \\
-     \vspace{1pt}
-     \textbf{Others}   \hspace{8.8mm} {Event photography \& videography, Website design \& development}
-    }}\vspace{-4pt}
- \end{itemize}
 
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bard College}{Aug 2022 -- May 2024}
-      {Bachelor of Arts in Computer Science}{Annandale-on-Hudson, NY}
-    \resumeSubheading
-      {Chung-Ang University}{Mar 2019 -- Dec 2020}
-      {Bachelor of Engineering in Computer Science and Engineering}{Seoul, South Korea}
-      \resumeItemListStart
-        \resumeItem{\textbf{GPA: 3.9/4.0}, Ranked in the top 10 universities for Computer Science in Korea}
-        \resumeItem{Study abroad at Stony Brook University \textit{(Spring 2020)}, leave due to military service \textit{(Jan 2021 -- Jul 2022)}}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
 
-%-------------------------------------------
+  \resumeSubheading
+    {Bard College}{Aug 2022 -- May 2024}
+    {Bachelor of Arts in Computer Science, \textbf{GPA: 4.0}}{Annandale-on-Hudson, New York, United States}
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeEntry
-          {Hackathon Team Lead}{}{Sep 2021 -- Oct 2021}
-          \resumeItemListStart
-            \resumeItem{Proposed and implemented \href{https://bit.ly/ntcho_handover}{\myuline{\textbf{Handover}}} --- web-based knowledge base software designed for military intranet}
-            \resumeItem{Winner of the \textbf{\color{customred}Chief of Naval Operations Award (4th out of 70 teams) in the national open-source hackathon}}
-            \resumeItem{Led a team of 5, including engineers and designers, completing the project in 5 weeks using agile methodologies}
-            % \resumeItem{\textbf{Architected the RESTful API, supporting access management, collaborative editing and version control}}
-            % \resumeItem{Optimized build times by \textasciitilde{}80\% by dockerizing the application into 4 microservices using Docker Compose}
-          \resumeItemListEnd
-      % \resumeProjectHeading
-      %     {\textbf{work.elastic}}{Sep 2022 -- Current}
-      %     \resumeItemListStart
-      %       \resumeItem{Founded work.elastic -- employee work-life balance analytics platform}
-      %       \resumeItem{Recruited interdisciplinary (PR, design, engineer) team of 6 from Columbia, Lithuania and United States}
-      %       \resumeItem{Devised initial idea, key features, business model; currently in user research phase}
-      %     \resumeItemListEnd
-      \resumeEntry
-          {Co-founder, Software Engineer}{}{Aug 2021 -- Aug 2022}
-          \resumeItemListStart
-            \resumeItem{Co-founded and launched \textbf{Fuhome} --- smart home (home automation) gadget e-commerce \& user community}
-            \resumeItem{Identified target users by conducting surveys with 100+ participants and virtual interviews with customers}
-            % \resumeItem{\textbf{Launched and tested MVP with 50+ users}, including online community and device database using Next.js}
-          \resumeItemListEnd
-      \resumeEntry
-          {Full-Stack Engineer}{}{Feb 2016 -- Jul 2018}
-          \resumeItemListStart
-            \resumeItem{Designed and built solo project \href{https://bit.ly/ntcho_tapad}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
-            \resumeItem{\textbf{\color{customred}Surpassed 290K+ downloads and 3,900+ reviews} on Play Store and responded to 1,500+ user feedbacks}
-            % \resumeItem{Improved real-time audio playback performance by 400\%, enabling 16-channel playback on low-end devices}
-            \resumeItem{Developed a companion web application for creating custom in-app content from audio assets}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+    \resumeItemListStart
+      \resumeItem{Full tuition scholarship recipient, Founder of Bard Computer Science Club, Member of Bard Student Government}
+    \resumeItemListEnd
+
+  \vspace{-4pt}
+
+  \resumeSubheading
+    {Chung-Ang University}{Mar 2019 -- Dec 2020}
+    {Bachelor of Engineering in Computer Science, \textbf{GPA: 3.9} \textit{(transferred to Bard College)}}{Seoul, South Korea}
+
+    \resumeItemListStart
+      \resumeItem{Ranked in top 10 Computer Science programs in Korea, Study abroad at Stony Brook University \textit{(Spring 2020)}}
+    \resumeItemListEnd
+
+  \vspace{-4pt}
+
+\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
-\section{Experiences}
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeExperienceEntry
+    {President}{Bard Computer Science Club}{Dec 2022 -- Current}
+    \resumeItemListStart
+      \resumeItem{Spearheaded initiatives to help computer science students by organizing 5+ regular meetings, workshops, and events}
+      \resumeItem{Worked closely with club heads and advisors to develop strategic plans, set goals, and manage budgets}
+      \resumeItem{Successfully launched as a new club, attracting 80+ signups through email and poster marketing campaigns}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Data Analyist Intern}{Bard College, Environmental Services}{Jan 2023 -- Current}
+    \resumeItemListStart
+      \resumeItem{Conducted data analysis and visualization projects using Google Sheets to support data-driven decision-making}
+      \resumeItem{Assisted in the collection and processing of operational data, handling and optimizing workload for 40+ employees}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Lab Assistant}{Bard College, Computer Science Department}{Jan 2023 -- Current}
+    \resumeItemListStart
+      \resumeItem{Tutored 20+ students in object-oriented programming concepts and Java programming language through weekly lab}
+      \resumeItem{Provided personalized feedback and guidance in 15-minute sessions, helping them identify areas for improvement}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Engineer Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
+    \resumeItemListStart
+      \resumeItem{Directed a squad of 6 combat engineers for 10 months, winning the Team of the Year Award from Major General}
+      \resumeItem{Pioneered and operated a new monitoring system for tactical communication network, achieving 98\% uptime}
+    \resumeItemListEnd
+
+  \resumeExperienceEntry
+    {Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
+    \resumeItemListStart
+      \resumeItem{Developed and launched \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built with React and deployed on AWS}
+      \resumeItem{Contributed 15K+ lines of code, collaborating with 3 engineers and 2 designers in 2-week sprints}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+
+
+  \section{Leadership and Community Engagement}
   \resumeSubHeadingListStart
 
-    \resumeEntry
-      {Frontend Software Engineer}{myworkbeat Inc.}{Dec 2019 -- Jan 2021}
-      \resumeItemListStart
-        \resumeItem{Developed \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- a local gig job listing/payment platform, built using React and React Native}
-        \resumeItem{\textbf{Contributed 15K+ lines of code, collaborating with 3 engineers and 2 designers in 2-week sprints}}
-        % \resumeItem{Enhanced user experience by identifying and improving page load time to \textasciitilde{}100ms with AWS CloudFront CDN}
-        % \resumeItem{Increased deployment speed and frequency by 5 times by creating CI/CD pipelines using Buddy}
-      \resumeItemListEnd
-
-    \resumeEntry
-      {Software Engineer (Contract)}{Hyosung Heavy Industries}{Aug 2019 -- Dec 2019}
-      \resumeItemListStart
-        \resumeItem{Built and operated a safety inspection web application for hydrogen fuel cell vehicle charging stations}
-        \resumeItem{Rolled out customizable check sheet, video upload and PDF export features used by 200+ field inspectors}
-      \resumeItemListEnd
-
-    \resumeEntry
-      {Software Engineer}{M+ Education Institution}{May 2019 -- Jul 2019}
-      \resumeItemListStart
-        \resumeItem{Created a student/employee time tracking system for Android phones and kiosks, \textbf{currently in production for \\ 3+ years, managing 500+ students and 80+ employees}}
-        \resumeItem{Implemented a serverless SMS notification service using Firebase, handling 1K+ messages per month for less than \$1}
-        % \resumeItem{Reduced server costs by \textasciitilde{}95\% and optimized average request latency to 50ms with client-side caching}
-      \resumeItemListEnd
-
-    % \resumeEntry
-    %   {Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
-    %   % \resumeItemListStart
-    %   %   \resumeItem{Increased productivity by 5 times automating hand-written documents into spreadsheets}
-    %   %   \resumeItem{Improved hourly intervals into second retrieving vehicle entry logs using JavaScript}
-    % \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-
-  \section{Additional Experiences}
-  \resumeSubHeadingListStart
-
-    \resumeEntry
+    \resumeExperienceEntry
       {Student Life Committee}{Bard Student Government}{Sep 2022 -- Current}
       \resumeItemListStart
         \resumeItem{Organized multiple student engagement events including Thanksgiving dinner attracting 100+ participants}
         \resumeItem{Tackled problems with student academics, housing, mental \& physical health with multiple departments}
       \resumeItemListEnd
 
-      \resumeEntry
-        {Youth Group Leader}{Gwanak Prestyberian Church}{Feb 2018 -- Jan 2021}
-        \resumeItemListStart
-          \resumeItem{Mentored 15+ teenagers with their academics and organized yearly gatherings for 3 years}
-        \resumeItemListEnd
+    \resumeExperienceEntry
+      {Citizen Science Education Mentor}{Bard College, Center for Civic Engagement}{Dec 2022 -- Jan 2023}
+      \resumeItemListStart
+        \resumeItem{Helped the Citizen Science Fellows leading activities focused on environmental science, hosting 200+ 8th graders}
+      \resumeItemListEnd
+
+    \resumeExperienceEntry
+      {Hackathon Team Lead}{Team Mapple}{Sep 2022 -- Nov 2022}
+      \resumeItemListStart
+        % \resumeItem{Developed \href{}{\myuline{\textbf{Mapple}}} --- local experience curator app built with Google Maps API and React Native}
+        \resumeItem{Awarded 2nd place in a hackathon hosted by Google, leading a team of 4 to win among 130 competing teams}
+        \resumeItem{Designed the ranking algorithm for place recommendations, integrating Google Maps API into user experience}
+      \resumeItemListEnd
+
+    \resumeExperienceEntry
+      {Youth Group Leader}{Gwanak Prestyberian Church}{Feb 2018 -- Jan 2021}
+      \resumeItemListStart
+        \resumeItem{Mentored 15+ teenagers with their academics and mental health and organized yearly gatherings for 3+ years}
+      \resumeItemListEnd
 
     % \resumeEntry
     %   {Sergeant}{Jan 2021 -- Jul 2022}
@@ -273,5 +264,18 @@
     % \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.08in, label={}]
+    \vspace{1pt}
+    \small{\item{
+     \textbf{Tools}   \hspace{11mm} {Microsoft Office, Google Workspace (Docs, Sheets, Slides), Photoshop, Premiere Pro, Figma} \\
+     \vspace{1pt}
+     \textbf{Others}   \hspace{8.8mm} {Event organization, Photography and videography, Graphic design (logo, poster, website, etc)}
+    }}\vspace{-4pt}
+ \end{itemize}
 
 \end{document}
