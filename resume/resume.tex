@@ -102,6 +102,13 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+\newcommand{\resumeEntry}[2]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{L{5.85in} R{1.5in}}
+      \hspace{-1.5pt}\textbf{#1} & \textbf{#2} \\
+    \end{tabular*}\vspace{-5.5pt}
+}
+
 \newcommand{\resumeExperienceEntry}[3]{
   \item
     % \begin{tabular*}{0.98\textwidth}{L{2.4in} C{2.55in} R{2.4in}}
@@ -186,7 +193,7 @@
   \vspace{1.2pt}
   \textbf{Technologies}\hspace{2mm} {React, React Native, Next.js, Android, Node.js, Jest, NumPy, PyTorch, MongoDB, Docker, AWS, Git} \\
   \vspace{1pt}
-  \textbf{Other}       \hspace{13mm} {Entrepreneurship, API design, CI/CD, Open source contribution, UI/UX design, User research}
+  \textbf{Other}       \hspace{13mm} {API design, UI/UX design, User research, Entrepreneurship, Open source contribution}
   }}\vspace{-4pt}
 \end{itemize}
 
@@ -194,6 +201,13 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
+
+  \resumeExperienceEntry
+    {Data Analyst Intern}{Bard College}{Jan 2023 -- Current}
+    \resumeItemListStart
+      \resumeItem{Initiated data analysis and visualization projects for employee operations, supporting data-driven decision-making}
+      \resumeItem{Revamped database to track assignments on 120+ locations, resulting in a 15\% increase in task completion rates}
+    \resumeItemListEnd
 
   \resumeExperienceEntry
     {Engineer Sergeant}{Republic of Korea Army}{Jan 2021 -- Jul 2022}
@@ -207,7 +221,7 @@
     \resumeItemListStart
       \resumeItem{Developed and launched \href{https://apple.co/3La39ZX}{\myuline{\textbf{sugosugo}}} --- local gig job listing/payment platform, built with React and deployed on AWS}
       \resumeItem{Generated initial revenue by integrating payment system, collaborating with the product owner and 2 engineers}
-      \resumeItem{Improved the page response time to \textasciitilde{}100ms using CDN, after identifying server bottleneck issue from user analytics}
+      % \resumeItem{Improved the page response time to \textasciitilde{}100ms using CDN, after identifying server bottleneck issue from user analytics}
       \resumeItem{Increased deployment frequency by 500\% and introduced automated testing by implementing CI/CD pipelines}
     \resumeItemListEnd
 
@@ -224,7 +238,7 @@
     \resumeItemListStart
       \resumeItem{Created a time tracking system for Android phones and kiosks, currently used by 500+ students and 80+ employees}
       \resumeItem{Engineered a serverless SMS service using Firebase, sending 2,500+ notifications for less than \$1 per month}
-      \resumeItem{Decreased server costs by 90\% and average response latency by 50\% by optimizing requests with client-side caching}
+      % \resumeItem{Decreased server costs by 90\% and average response latency by 50\% by optimizing requests with client-side caching}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -234,17 +248,25 @@
 \section{Leadership and Achievements}
 \resumeSubHeadingListStart
 
-  \resumeProjectEntry
-    {\href{https://bit.ly/ntcho_workelastic_rb}{\myuline{PeopleViz}}}
-    {HR data analytics platform for SMBs}
-    {Next.js, PyTorch}
-    {Sep 2022 -- Current}
+  \resumeEntry
+    {\href{https://bardcsc.notion.site}{\myuline{Bard Computer Science Club}}}{Dec 2022 -- Current}
     \resumeItemListStart
-      % \resumeItem{Founded start-up \textbf{work.elastic} -- people data analytics platform for small to medium size businesses}
-      \resumeItem{Built a predictive model using neural network algorithm to predict employee turnover risk with 97\% accuracy}
-      \resumeItem{Recruited and managed a multi-disciplinary (legal, design, HR) team of 6 from Columbia, Lithuania and U.S.}
-      % \resumeItem{Devised business model; currently in user research phase}
+      \resumeItem{Spearheaded initiatives such as student project group, career workshops, alumni networking events and hackathons}
+      \resumeItem{Devised and deployed marketing campaign for the club through posters and emails, achieving 70+ signups in 5 days}
+      % \resumeItem{Worked closely with club heads and advisors to develop strategic plans, set goals, and manage budgets}
     \resumeItemListEnd
+
+  % \resumeProjectEntry
+  %   {\href{https://bit.ly/ntcho_workelastic_rb}{\myuline{PeopleViz}}}
+  %   {HR data analytics platform for SMBs}
+  %   {Next.js, PyTorch}
+  %   {Sep 2022 -- Current}
+  %   \resumeItemListStart
+  %     % \resumeItem{Founded start-up \textbf{work.elastic} -- people data analytics platform for small to medium size businesses}
+  %     \resumeItem{Built a predictive model using neural network algorithm to predict employee turnover risk with 97\% accuracy}
+  %     \resumeItem{Recruited and managed a multi-disciplinary (legal, design, HR) team of 6 from Columbia, Lithuania and U.S.}
+  %     % \resumeItem{Devised business model; currently in user research phase}
+  %   \resumeItemListEnd
 
   \resumeProjectEntry
     {\href{https://bit.ly/ntcho_mapple}{\myuline{Mapple}}}
@@ -284,7 +306,7 @@
     \resumeItemListStart
       % \resumeItem{Designed and built solo project \href{}{\myuline{\textbf{Tapad}}} --- mobile Launchpad simulator for recreating and remixing music}
       \resumeItem{Surpassed 300,000+ installs and 3,900+ reviews on Play Store and resolved 1,500+ tickets as a solo developer}
-      \resumeItem{Reduced app crashes by 85\% and enabled 16-channel audio playback by implementing memory optimization}
+      % \resumeItem{Reduced app crashes by 85\% and enabled 16-channel audio playback by implementing memory optimization}
       % \resumeItem{Developed a companion web application for creating custom in-app content from audio assets}
     \resumeItemListEnd
 
