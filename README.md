@@ -9,7 +9,8 @@ I’m an aspiring entrepreneur, developer and photographer. I love making things
 - Launched an app with 300K+ users in middle school
 - Worked in startups since when I was 15
 - Went to #1 public high school for computer science in Korea
-- Currently studying computer science at [Bard College](https://bard.edu) and working at [Phi Networks Group](https://phinetworksgroup.com/)
+- Studied computer science at [Bard College](https://bard.edu)
+- Currently working at [Phi Networks Group](https://phinetworksgroup.com/)
 
 ## Where to find me online
 
