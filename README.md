@@ -10,7 +10,7 @@ I’m an aspiring entrepreneur, developer and photographer. I love making things
 - Worked in startups since when I was 15
 - Went to #1 public high school for computer science in Korea
 - Studied computer science at [Bard College](https://bard.edu)
-- Currently working at [Phi Networks Group](https://phinetworksgroup.com/)
+- Currently working at [Hoboken Grace Community Church](https://hobokengrace.com/)
 
 ## Where to find me online
 
