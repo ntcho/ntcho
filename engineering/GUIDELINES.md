@@ -56,7 +56,7 @@ if isValid && isAllowed && isSecure {
 ## JavaScript / TypeScript
 
 - Use JSDoc/TSDoc for all functions.
-- Include `@param` and `@returns` on every function. (can be omitted if the signature already makes them explicit)
+- Include `@param` and `@returns` only when they add something the signature does not: units, ranges, what `null` or `undefined` means, side effects, ordering, or errors the caller must handle. Omit tags that restate a parameter's name or type.
 - Include `@throws` only for custom or business-logic exceptions. Do not document standard built-in errors unless the code relies on them as part of the API contract.
 - Add property or member comments only when the name does not already make the purpose clear.
 - Include `@example` when usage is not obvious, especially for utilities or dense business logic.
